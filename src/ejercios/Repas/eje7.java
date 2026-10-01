@@ -1,3 +1,5 @@
+package ejercios.Repas;
+
 import java.util.Scanner;
 
 public class eje7 {

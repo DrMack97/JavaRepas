@@ -1,3 +1,5 @@
+package ejercios.Repas;
+
 public class eje9 {
 
     public static void main(String[] args) {

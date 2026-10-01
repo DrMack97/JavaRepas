@@ -1,3 +1,5 @@
+package ejercios.Repas;
+
 import java.util.Scanner;
 // 6,8,9,10,14
 public class eje6 {
@@ -12,7 +14,7 @@ public class eje6 {
 
     static int RetornarIndex(int[]v, int num){
 
-        for (int i = 0; i < v[].; i++) {
+        for (int i = 0; i < v[].cc; i++) {
 
         }
         return -1;
