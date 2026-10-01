@@ -2,6 +2,14 @@ import java.util.Scanner;
 
 public class eje8 {
 
+    //Para resolver: 
+    /*
+        1- pedir tamaño y posicion al user (Scanner)
+        2- permetir moverse por el tablero preguntando su direccion (doWhile/Switch)
+        3- metodo para validar que el movimiento este dentro del tablero
+        4- metodo para pintar el tablero y al personaje (doble bucle for)
+    
+     */
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -22,27 +30,39 @@ public class eje8 {
 
         do {
 
-            System.out.println("que movimiento quieres hacer? ");
-            String move = sc.nextLine();
+            System.out.println("\nque movimiento quieres hacer? ");
+            String move = sc.nextLine().toUpperCase();
 
             switch (move) {
                 case "A":
-                    
-                    columna--;
+                    if (!validMove(n, fila, columna - 1)) {
+                        System.out.println("movimiento invalido");
+                    } else {
+                        columna--;
+                    }
                     break;
-
                 case "S":
-                    fila++;
-                    
+                    if (!validMove(n, fila + 1, columna)) {
+                        System.out.println("movimiento invalido");
+                    } else {
+                        fila++;
+                    }
                     break;
                 case "D":
-                    columna++;
+                    if (!validMove(n, fila, columna + 1)) {
+                        System.out.println("movimiento invalido");
+                    } else {
+                        columna++;
+                    }
                     break;
                 case "W":
-                    fila--;
-                    
+                    if (!validMove(n, fila - 1, columna)) {
+                        System.out.println("movimiento invalido");
+                    } else {
+                        fila--;
+                    }
                     break;
-                case "F":
+                case "F" :
                     System.out.println("adios!!");
                         exit = true;
                     break;
@@ -74,8 +94,9 @@ public class eje8 {
             for (int j = 0; j < n; j++) {
                 if (i == fila && j == columna) {
                     System.out.print("[P]");
+                }else{
+                    System.out.print("[ ]");
                 }
-                System.out.print("[ ]");
             }
             System.out.println(" ");
         }
