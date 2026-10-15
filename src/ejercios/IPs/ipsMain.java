@@ -1,9 +1,11 @@
-package IPs;
+package ejercios.IPs;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 public class ipsMain {
+
+    // UDP (user datagram protocol)
     public static void main(String[] args) {
 
         //InetAddress ip = InetAddress.getLocalHost();

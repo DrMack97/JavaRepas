@@ -1,14 +1,15 @@
-package IPs;
+package ejercios.IPs;
 
 import java.io.IOException;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 
-public class Cliente {
+public class Server {
     public static void main(String[] args) {
         try {
             InetAddress ip = InetAddress.getByName("127.0.0.1");
             DatagramSocket clientSocket = new DatagramSocket();
+            clientSocket.setSoTimeout(5000);
             byte[] data = "hola".getBytes(StandardCharsets.UTF_8);
             DatagramPacket packet = new DatagramPacket(data, data.length, ip, 22000);
             // Mensaje, tamaño, ip, puerto
@@ -19,7 +20,12 @@ public class Cliente {
             byte[] buffer = new byte[65156];
             DatagramPacket servidorCliente = new DatagramPacket(buffer, buffer.length);
             clientSocket.receive(servidorCliente);
-            System.out.println("Data: "+ new String(servidorCliente.getData()));
+
+            System.out.println("Data: "+ new String(servidorCliente.getData(),
+             0, 
+             servidorCliente.getLength(), 
+             StandardCharsets.UTF_8));
+             
             clientSocket.close();
 
         }catch (UnknownHostException e){
