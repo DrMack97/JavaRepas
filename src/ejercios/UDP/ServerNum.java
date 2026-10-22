@@ -1,4 +1,4 @@
-package ejercios.IPs;
+package ejercios.UDP;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;

@@ -1,4 +1,4 @@
-package ejercios.IPs;
+package ejercios.UDP;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -51,11 +51,10 @@ public class ClienteNum {
                 // soliciona el problema de paquete vacio
                 if (texto.isEmpty()) {
                     System.out.println("paquete vacio");
-                }else{
-                    int numeros;
+            
                 try {
                     // Parsear string a int
-
+                    int numeros;
                     numeros = Integer.parseInt(texto);
                     
                     System.out.println("Recibo: "+ numeros + "Devuelvo el doble: "+(numeros*2));

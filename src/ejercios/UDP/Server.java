@@ -1,4 +1,4 @@
-package ejercios.IPs;
+package ejercios.UDP;
 
 import java.io.IOException;
 import java.net.*;

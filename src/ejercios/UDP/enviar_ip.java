@@ -1,4 +1,4 @@
-package ejercios.IPs;
+package ejercios.UDP;
 
 import java.net.*;
 import java.nio.charset.StandardCharsets;
