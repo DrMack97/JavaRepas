@@ -29,8 +29,6 @@ public class PongServ {
 
                 pong.send(p);
 
-                
-
                 // recibir pings
                 
                 byte[] recibirPing =new byte[1024];

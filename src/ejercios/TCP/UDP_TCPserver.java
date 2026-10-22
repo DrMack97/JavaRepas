@@ -6,6 +6,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 
 public class UDP_TCPserver {
     public static void main(String[] args) {
@@ -53,10 +54,10 @@ public class UDP_TCPserver {
                     String respuesta= "netfone gif you up";
 
                     OutputStream out = socket.getOutputStream();
-                    out.write(respuesta.getBytes("UTF-8"));
+                    out.write(respuesta.getBytes(StandardCharsets.UTF_8));
                     out.flush();
 
-                    System.out.println("[TCP] enviados:" + respuesta.getBytes("UTF-8").length + " bytes");
+                    System.out.println("[TCP] enviados:" + respuesta.getBytes(StandardCharsets.UTF_8).length + " bytes");
 
                 } 
             } 
