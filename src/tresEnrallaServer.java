@@ -101,7 +101,9 @@ public class tresEnrallaServer {
             // si sigue mover maquina y re comprobar tablero
             if (partidaEnCurso) {
                 movimientoServer(tableroServer, ficharServer);
-                partidaEnCurso = estaLleno(tableroServer);
+                
+            }else if(estaLleno(tableroServer)){
+                partidaEnCurso = false;
             }
 
             out.writeBoolean(partidaEnCurso);
